@@ -15,11 +15,14 @@ def main():
 
 
 def find_roots(a,b,c):
-    mid = b^2 - 4*a*c
-    sqrt_mid = mid^(1/2)
-    x1 = (-b + sqrt_mid)/2*a
-    x2 = (-b - sqrt_mid)/2*a
-    return x1, x2
+    try:
+        mid = b**2 - 4*a*c
+        sqrt_mid = mid**(1/2)
+        x1 = (-b + sqrt_mid)/(2*a)
+        x2 = (-b - sqrt_mid)/(2*a)
+        return x1, x2
+    except:
+        "Invalid values"
 
 
 if __name__=="__main__":
